@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../images/meeting.png" alt="" style="max-width: 100%;">
+
+        <picture>
+            <source media="(max-width: 600px)" srcset="../images/meeting.png">
+            <source media="(min-width: 601px) and (max-width: 1200px)" srcset="../images/nature.jpg">
+            <img src="../images/icons8-home-50.png" alt="Meeting Image" style="width: 100%;">
+            <!-- 
+        Các thuộc tính của thẻ picture:
+            - <source media="...">: Chỉ định điều kiện để sử dụng hình ảnh này
+            - srcset: Chỉ định hình ảnh sẽ được sử dụng khi điều kiện media phù hợp
+            - <img>: Hình ảnh mặc định sẽ được hiển thị nếu không có điều kiện nào phù hợp
+        -->
+        </picture>
+
+        <!-- viewport 
+        Viewport là kích thước cửa sổ trình duyệt. 1vw = 1% chiều rộng của viewport.
+        Nếu viewport rộng 50cm, 1vw bằng 0,5cm. 
+        -->
+        <h2 style="font-size: 2vw;">
+            Viewport là vùng hiển thị của trình duyệt, nó xác định kích thước của trang web trên các thiết bị khác nhau.
+            Thuộc tính viewport có thể được sử dụng để điều chỉnh cách hiển thị trang web trên các thiết bị khác nhau.
+            Ví dụ:
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            - width=device-width: Đặt chiều rộng của viewport bằng với chiều rộng của thiết bị
+            - initial-scale=1.0: Đặt tỷ lệ thu phóng ban đầu là 1.0
+        </h2>
+
+    </div>
+</body>
+
+</html>

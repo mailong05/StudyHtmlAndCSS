@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai01</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: solid 1px red;
+        }
+
+        #thanhcongcu {
+            background-color: rgb(249, 125, 162);
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 100px 0px 100px;
+            color: white;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .container header h1 {
+            color: rgb(227, 105, 126);
+        }
+
+        .container header {
+            text-align: center;
+        }
+
+        .input {
+            width: 200px;
+            height: 30px;
+            margin-top: 15px;
+        }
+
+        .sub {
+            width: 30px;
+            height: 30px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1> EXAMPLE CAFE MENU</h1>
+            <div id="thanhcongcu">
+                <h2>STARTER</h2>
+                <h2>MAIN COURSES</h2>
+                <h2>DESSERTS</h2>
+                <div>
+                    <label for="search-box">Search</label>
+                    <input type="text" class="input" name="search" id="search-box">
+                    <input type="submit" class="sub" value="Go">
+                    <!-- lable for = "name" để kết hợp với id = "name" trong input = "text" có tác dụng giúp mở rộng vùng tương tác của nút 
+                    Cụ thể: Khi click vào lable (tên của lable(ở đây là Search)) thì input sẽ được hoạt động -->
+                    <!-- Value trong submit có tác dụng như nhãn giúp người dùng biết chức năng của nút-->
+                    <!-- Và khi nhấn submit thì hệ thống sẽ gửi thông tin dưới dạng "search = ".. tìm kiếm của user" "  -->
+
+                </div>
+            </div>
+        </header>
+        <nav></nav>
+        <section></section>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

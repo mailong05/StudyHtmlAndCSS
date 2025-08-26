@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Combinators có thể là: 
+        - Descendant combinator (space): Chọn tất cả các phần tử con của phần tử cha cụ thể 
+        - Child combinator (>): Chọn tất cả các phần tử con trực tiếp của phần tử cha các phần tử sâu hơn không được chọn
+        - Adjacent sibling combinator (+): Chọn phần tử anh em kế tiếp của phần tử đứng trước (nếu ptu đứng trước cao cấp hơn còn nếu cùng cấp thì giống "~") nếu cùng phần tử cha
+        - General sibling combinator (~): Chọn tất cả các phần tử anh em của phần tử đứng trước */
+        /* Descendant combinator */
+
+        /*Descendant */
+        /* Cha: container Con: p */
+        /* combinators là (space) */
+        #container p {
+            color: red;
+        }
+
+        /* Child combinator */
+        #container>p {
+            color: blue;
+        }
+
+        /* Adjacent sibling combinator */
+        #container>h5+p {
+            color: green;
+        }
+
+        /* General sibling combinator */
+        #container>p~p {
+            color: rgb(112, 112, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h5>title</h5>
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <p>This is #3</p>
+        <p>This is #4</p>
+        <div>
+            <p>This is #son</p>
+        </div>
+    </div>
+    <p>This is #5</p>
+</body>
+
+</html>

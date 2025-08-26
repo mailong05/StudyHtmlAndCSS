@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" target="_blank">
+        <fieldset>
+            <legend>Personaly:</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br>
+        </fieldset>
+    </form>
+    <!-- 
+        fieldset: Tạo một nhóm các trường trong biểu mẫu, giúp tổ chức và phân loại các trường liên quan.
+        legend: Cung cấp tiêu đề cho nhóm trường trong fieldset, giúp người dùng hiểu nội dung của nhóm trường đó.
+    -->
+    <form action="" target="_blank">
+        <input list="skills" id="skill" name="skill">
+        <datalist id="skills">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">
+            <option value="Python">
+            <option value="Java">
+        </datalist>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- 
+    datalist: Cung cấp một danh sách các tùy chọn cho người dùng chọn khi nhập liệu vào trường input.
+    Khi người dùng bắt đầu gõ, trình duyệt sẽ hiển thị các tùy chọn phù hợp từ datalist.
+    Datalist giúp cải thiện trải nghiệm người dùng bằng cách cung cấp gợi ý nhanh chóng.
+    Chú ý: 
+    - Datalist chỉ hỗ trợ với các trường input có type là text, search, hoặc url.
+    - Datalist không hỗ trợ với các trường input có type là number, date, hoặc email.
+    - Datalist không hỗ trợ với các trường input có type là checkbox, radio, hoặc submit.
+    - không được thêm thuộc tính placeholder vào datalist.    
+-->
+    <form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <label for="a">a:</label>
+        <input type="range" id="a" value="50"><br>
+        <label for="b">b:</label>
+        <input type="number" id="b" value="50"><br>
+        <output name="x" for="a b"></output>
+        <!-- 
+        oninput: Sự kiện này được kích hoạt khi người dùng thay đổi giá trị của trường input.
+        Nó cho phép cập nhật giá trị của output ngay lập tức khi người dùng thay đổi giá trị của a hoặc b.
+        for a b: Thuộc tính này chỉ định các trường input nào sẽ được liên kết với output. Nếu không có thuộc tính này, output vẫn tính toán đúng và không có lỗi, nhưng sẽ không hỗ trợ accessibility tốt vì người dùng không thể biết được output này liên kết với các trường input nào.
+        output: Hiển thị kết quả của phép tính a + b.
+        value: Thuộc tính này xác định giá trị mặc định của trường input.
+        -->
+
+    </form>
+</body>
+
+</html>

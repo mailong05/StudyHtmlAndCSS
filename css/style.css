@@ -1,0 +1,218 @@
+  .container {
+      width: 1000px;
+      margin: 0 auto;
+      border: solid 1px red;
+      box-sizing: border-box;
+  }
+
+  header {
+      width: 100%;
+  }
+
+  nav {
+      float: left;
+      width: 20%;
+  }
+
+  section {
+      float: left;
+      width: 35%;
+  }
+
+  aside {
+      float: left;
+      width: 35%;
+      margin: 20px 0px 0px 99px;
+  }
+
+  footer {
+      clear: both;
+  }
+
+  #note {
+      color: rgb(199, 75, 75);
+  }
+
+  section a {
+      color: rgb(245, 6, 6);
+  }
+
+  .starter {
+      background-color: rgb(230, 141, 141);
+      color: white;
+      letter-spacing: 10px;
+  }
+
+  #thanhcongcu {
+      background-color: rgb(230, 141, 141);
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 100px 0px 100px;
+      color: white;
+  }
+
+  #thanhcongcu img {
+      border-right: solid 4px blue;
+      height: 30px;
+      padding-top: 20px;
+      padding-right: 10px;
+  }
+
+  #thanhcongcu h2 {
+      border-right: solid 4px blue;
+      padding-right: 10px;
+  }
+
+  header img {
+      width: 50px;
+      height: 50px;
+  }
+
+  header h1 {
+      color: rgb(161, 51, 51);
+      text-shadow: 9px 8px 1px rgb(253, 166, 166);
+      font-style: italic;
+  }
+
+
+
+
+  .container header {
+      text-align: center;
+  }
+
+  .input {
+      width: 200px;
+      height: 30px;
+      margin-top: 15px;
+  }
+
+  .sub {
+      width: 30px;
+      height: 30px;
+      margin-top: 15px;
+  }
+
+  nav ul {
+      list-style-type: none;
+  }
+
+  nav ul li {
+      margin-top: 10px;
+      background-color: rgb(230, 141, 141);
+      border-radius: 20px;
+      width: 150px;
+      height: 30px;
+      text-align: center;
+      padding-top: 15px;
+  }
+
+  section h2 {
+      width: 90%;
+      float: right;
+      text-align: center;
+      background-color: rgb(230, 141, 141);
+      color: rgb(101, 47, 47);
+      letter-spacing: 10px;
+  }
+
+  section img {
+      width: 50%;
+      float: right;
+      margin-left: 50px;
+  }
+
+  section ul {
+      list-style-type: none;
+
+  }
+
+  aside {
+      background-color: black;
+      box-sizing: border-box;
+  }
+
+  aside h3,
+  p {
+      padding: 10px;
+  }
+
+  aside h2,
+  h3,
+  p {
+      color: white;
+  }
+
+  aside a {
+      color: rgb(232, 115, 115);
+      text-decoration: none;
+  }
+
+  aside img {
+      width: 200px;
+      height: 200px;
+      margin-left: 50px;
+      margin-top: 20px;
+  }
+
+
+
+  .form-row {
+      display: flex;
+      margin-top: 10px;
+      gap: 15px;
+      /* gap: 15px có tác dụng tạo khoảng cách giữa các thành phần con của nó là 15px margin-bottom: 10px; */
+  }
+
+  .form-group {
+      flex: 1;
+      /* flex: 1 có tác dụng làm cho các thành phần con của nó chiếm hết không gian còn lại của thành phần cha */
+      display: flex;
+      flex-direction: column;
+      /* flex-direction: column có tác dụng làm cho các thành phần con của nó sắp xếp theo chiều dọc */
+  }
+
+  input,
+  select,
+  textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+
+  .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+
+  .form-buttons {
+      display: flex;
+      gap: 10px;
+  }
+
+  button {
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+  }
+
+  footer {
+      background-color: rgb(230, 141, 141);
+      height: 100px;
+      padding: 15px;
+      margin-top: 20px;
+  }
+
+  footer h2 {
+      text-align: center;
+      margin-bottom: 0px;
+      color: white;
+  }
+
+  #clearfix {
+      clear: both;
+  }

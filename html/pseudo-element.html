@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*    Combinators-element có thể là các pseudo-elements:
+        - first-letter: Chọn chữ cái đầu tiên của phần tử
+        - first-line: Chọn dòng đầu tiên của phần tử
+        - selection: Chọn phần tử khi được chọn
+        - before: Thêm nội dung vào trước phần tử
+        - after: Thêm nội dung vào sau phần tử
+        - marker: Thêm nội dung vào trước phần tử (marker là một pseudo-element mới, chỉ hoạt động với danh sách và thẻ <li>)
+        ... 
+        Phân bỉen giữa ::before và marker:
+        Dùng ::marker khi muốn tùy chỉnh dấu đầu dòng hoặc số thứ tự của danh sách mà không cần can thiệp vào cấu trúc HTML.
+        Dùng ::before khi muốn chèn nội dung trước phần tử bất kỳ (ví dụ: biểu tượng cảnh báo, nhãn tùy chỉnh, hình ảnh, etc.).
+        */
+        h1::first-letter {
+            font-size: 50px;
+            color: red;
+        }
+
+        p::first-line {
+            font-size: 20px;
+            color: rgb(0, 255, 51);
+            background-color: yellow;
+        }
+
+        p::selection {
+            color: white;
+            background-color: rgb(15, 186, 237);
+        }
+
+        /* #list li::before {
+            content: "MH:";
+            color:green;
+        } */
+
+        #apple::after {
+            content: "🍎";
+        }
+
+        #organe::after {
+            content: "🍊";
+        }
+
+        #potato::after {
+            content: "🥔";
+        }
+
+        #list li::marker {
+            content: "MH:";
+            color: rgb(9, 220, 9);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam tenetur delectus illum, possimus
+        reprehenderit totam atque eum numquam impedit et reiciendis, eaque facilis rerum veniam, optio vel? Eveniet,
+        obcaecati.</p>
+    <ul id="list">
+        <li id="apple">Apple</li>
+        <li id="organe">Organe</li>
+        <li id="potato">Potato</li>
+    </ul>
+</body>
+
+</html>

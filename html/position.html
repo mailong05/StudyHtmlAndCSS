@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            /* position có thể là static, relative, absolute, fixed, sticky
+                - static: Mặc định, phần tử sẽ nằm theo thứ tự xuất hiện trong file html
+                - relative: Phần tử sẽ nằm theo thứ tự xuất hiện trong file html nhưng có thể di chuyển bằng top, right, bottom, left
+                - absolute: hần tử sẽ di chuyển dựa trên phần tử cha gần nhất có position: relative (nếu không có thì theo body).
+                - fixed: Phần tử sẽ luôn cố định trên cửa sổ trình duyệt dù bạn cuộn trang.
+                - sticky: Phần tử sẽ dính lại ở vị trí khi cuộn đến một điểm nhất định.
+            */
+            top: 50px;
+            left: 300px;
+            /* top, right, bottom, left: di chuyển phần tử theo chiều dọc và chiều ngang */
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 20px;
+            left: 100px;
+        }
+
+        #box3 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 200px;
+            left: 50px;
+        }
+
+        #boxofbox3 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            top: 80px;
+            left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3">
+        <div id="boxofbox3"></div>
+    </div>
+</body>
+
+</html>

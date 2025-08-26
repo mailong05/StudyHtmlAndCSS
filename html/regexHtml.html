@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Regex</title>
+    <style>
+        .inp {
+            width: 200px;
+            height: 20px;
+            margin-bottom: 10px;
+            border: solid 2px rgb(236, 228, 228);
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function kiemTraMaSV() {
+            var maSV = document.getElementById("maSV").value;
+            var pattern = /[A-Z]{1}[0-9]{9}$/;
+            if (pattern.test(maSV)) {
+                alert("Mã hợp lệ");
+            } else {
+                alert("Mã không hợp lệ");
+            }
+        }
+
+        function kiemTraHoTen() {
+            var hoTen = document.getElementById("hoten").value;
+            var pattern = /([A-Z]{1}[a-z]+)\s([A-Z][a-z]*)+$/;
+            if (pattern.test(hoTen)) {
+                alert("Tên hợp lệ");
+            } else {
+                alert("Tên không hợp lệ");
+            }
+        }
+        function kiemTraEmail() {
+            var email = document.getElementById("email").value;
+            var pattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
+            if (pattern.test(email)) {
+                alert("Email hợp lệ");
+            } else {
+                alert("Email không hợp lệ");
+            }
+        }
+        function kiemTraTuoi() {
+            var tuoi = document.getElementById("tuoi").value;
+            if (parseInt(tuoi) > 18) {
+                alert("Tuổi hợp lệ");
+            } else {
+                alert("Tuổi không hợp lệ");
+            }
+        }
+        function kiemTraAnh() {
+            var fileInput = document.getElementById("images");
+            var filePath = fileInput.value; // Lấy đường dẫn tệp
+            var resultText = document.getElementById("result");
+            var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+            if (allowedExtensions.exec(filePath)) {
+                alert("Ảnh hợp lệ");
+            } else {
+                alert("Ảnh không hợp lệ");
+            }
+        }
+        function kiemTraNgay() {
+            var ngay = document.getElementById("ngay-dang-ky").value;
+            var currentDate = new Date();
+            var registrationDate = new Date(ngay);
+            var timeDifference = registrationDate.getTime() - currentDate.getTime();
+            var dayDifference = timeDifference / (1000 * 3600 * 24);
+            if (dayDifference > 20) {
+                alert("Ngày đăng ký hợp lệ");
+            } else {
+                alert("Ngày đăng ký không hợp lệ");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <div id="nhan">
+                <label class="lab" for="ma-sinh-vien">Mã sinh viên: </label>
+                <input class="inp" type="text" id="maSV" name="maSV" required placeholder="Nhập mã sinh viên"><br>
+                <label class="lab" for="ho-ten">Họ tên: </label>
+                <input class="inp" type="text" id="hoten" name="hoten" required placeholder="Nhập họ tên"><br>
+                <label class="lab" for="email">Email: </label>
+                <input class="inp" type="text" id="email" name="email" required placeholder="Nhập email"><br>
+                <label class="lab" for="tuoi">Tuổi: </label>
+                <input class="inp" type="text" id="tuoi" name="tuoi" required placeholder="Nhập tuổi"><br>
+                <label class="lab" for="ngay-dang-ky">Ngày đăng kí: </label>
+                <input class="inp" type="date" id="ngay-dang-ky" name="ngay-dang-ky"><br>
+                <label class="lab" for="images">Ảnh: </label>
+                <input class="inp" type="file" id="images" name="images"><br>
+            </div>
+            <br>
+            <div id="sub">
+                <button type="button" onclick="kiemTraTatCa()">Kiểm tra tất cả</button>
+                <script>
+                    function kiemTraTatCa() {
+                        kiemTraMaSV();
+                        kiemTraHoTen();
+                        kiemTraEmail();
+                        kiemTraTuoi();
+                        kiemTraAnh();
+                        kiemTraNgay();
+                    }
+                </script>
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

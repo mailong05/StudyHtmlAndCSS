@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/cssForformAddress.css">
+</head>
+
+<body>
+    <button onclick="changeText()" style="border-radius:4px; background-color: aqua;" ;>
+        Click here
+    </button>
+    <h3 id="h1id1">Hello</h3>
+    <script>
+        changeText = () => {
+            document.getElementById("h1id1").innerHTML = "GoodBye";
+        }
+    </script>
+    <!--HTML Form-->
+    <br><br>
+    <form action="/submit" method="post">
+        <h3> Đăng nhập</h3>
+        <div>
+            <label for="fname">firtname:</label>
+            <input type="text" id="fname" name="firtname"><br>
+        </div>
+        <div>
+            <label for="lname">lastname:</label>
+            <input type="text" id="lname" name="lastname"><br>
+        </div>
+        <div>
+            <label for="date">NgaySinh</label>
+            <input type="date" id="date" style="border-radius: 2px;"><br>
+        </div>
+        <div>
+            <label for="number">MSSV</label>
+            <input type="number" id="number" name="MSSV"><br>
+        </div>
+        <div>
+            <label for="pass">password</label>
+            <input type="password" id="pass" name="password"><br>
+        </div>
+        <div>
+            <select>
+                <option value="CNTT">CNTT</option>
+                <option value="ATTT">ATTT</option>
+                <option value="IOT">IOT</option>
+                <option value="KHMT">KHMT</option>
+            </select>
+        </div>
+        <div>
+            <input type="radio" name="role" value="Student">Student
+            <input type="radio" name="role" value="Teacher">Teacher
+            <input type="radio" name="role" value="Staff">Staff
+        </div>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <h3> Store Hours</h3>
+    <table>
+        <tr style="text-align: center;">
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+        <tr>
+            <th>8Am - 22Pm</th>
+            <th>8Am - 22Pm</th>
+            <th>8Am - 22Pm</th>
+            <th>8Am - 22Pm</th>
+            <th>8Am - 22Pm</th>
+            <th>6Am - 23Pm</th>
+            <th>10Am - 21Pm</th>
+        </tr>
+    </table>
+
+    <br>
+    <!-- Tạo nút chứa đường dẫn (link) -->
+
+    <a href="demo.html">
+        <button id="bt01" onmouseover="changeColor()" onmouseout="resetColor()">
+            Page2
+        </button>
+    </a>
+    <script>
+        function changeColor() {
+            document.getElementById("bt01").style.backgroundColor = "green";
+        }
+        function resetColor() {
+            document.getElementById("bt01").style.backgroundColor = "rgb(34, 90, 188)";
+        }
+    </script>
+
+    <form action="indext.php" method="POST" enctype="multipart/form-data">
+        <!-- enctype="multipart/form-data" có tác dụng cho phép form gửi dữ liệu file lên server.
+       nếu không có thuộc tính này, form chỉ gửi dữ liệu text lên server. -->
+        <label for="username">Name</label>
+        <input type="text" id="username" placeholder="Enter your name" name="username" required minlength="5"
+            maxlength="10">
+        <!-- required có tác dụng làm cho trường input bắt buộc phải nhập dữ liệu trước khi submit form.  -->
+        <!-- placeholder="Enter your name" có tác dụng hiển thị một dòng chữ mờ trong trường input, giúp người dùng hiểu rõ hơn về mục đích của trường input đó. -->
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" name="password" required minlength="5"
+            maxlength="10">
+        <!-- minlength, maxlength: giới hạn số ký tự nhập vào trường input. -->
+        <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter your email" name="email" required>
+        <br>
+        <label for="number">Phone</label>
+        <input type="text" id="number" placeholder="Enter your phone" name="number" required minlength="10"
+            maxlength="11" pattern="[0-9]{10,11}">
+        <br>
+        <label for="date">Birthday</label>
+        <input type="date" id="date" name="date" required>
+        <br>
+        <label for="Quantity">Quantity</label>
+        <input type="number" id="Quantity" name="Quantity" required min="0" max="99">
+        <br>
+        <label for="Color">Color:</label>
+        <input type="radio" id="Color" name="Color" value="Red">Red
+        <input type="radio" id="Color" name="Color" value="Blue">Blue
+        <input type="radio" id="Color" name="Color" value="Green">Green
+        <br>
+        <label for="Payment">Payment</label>
+        <select>
+            <option value="Bank">Bank</option>
+            <option value="Visa">Visa</option>
+            <option value="Master">MasterCard</option>
+            <option value="Paypal">Paypal</option>
+        </select>
+        <br>
+        <label for="Comment">Comment</label>
+        <br>
+        <textarea name="Comment" id="Comment" cols="20" rows="5"></textarea>
+        <br>
+        <label for="ChosseFile"></label>
+        <input type="file" id="ChosseFile" name="ChosseFile" accept=" .jpg, .jpeg, .png">
+    </form>
+
+    <address>
+        Được viết bởi Mai Vân Long
+        <br>
+        <a href=" mailto:vanlong816458@gmail.com">email</a>
+        <br>
+
+        HCM, ngày 25, tháng 12, năm 2024
+    </address>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenima</title>
+    <link rel="stylesheet" href="../css/styleForCenima.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <div id="logo">
+                <img class="w-100" src="../images/logo_netfix.png" alt="logo">
+            </div>
+            <div id="menu">
+                <div id="chooseLanguage">
+                    <label for="language"></label>
+                    <select class="form-select" name="language" id="language">
+                        <option value="Tiếng Việt" selected>Tiếng Việt</option>
+                        <option value="English">English</option>
+                        <option value="Francais">Francais</option>
+                        <option value="Italiano">Italiano</option>
+                        <option value="Filipio">Filipio</option>
+                    </select>
+                </div>
+                <div id="signIn">
+                    <button class="btn btn-danger m-4">
+                        Đăng nhập
+                    </button>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div id="content">
+                <h1><b>Phim, series không giới hạn và nhiều nội dung khác</b></h1>
+                <p>Giá từ 74.0000đ. Hủy bất kỳ lúc nào.</p>
+                <p>Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.</p>
+                <div id="emailBox" class="d-flex">
+                    <label for="email"></label>
+                    <input type="email" id="emailInput" class="form-control" name="email" id="email"
+                        placeholder="Địa chỉ email">
+                    <button id="btnStart" class="btn btn-danger">Bắt đầu <span>></span></button>
+                </div>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

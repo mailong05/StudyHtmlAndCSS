@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="datemax">Enter a date before 1980-01-01:</label>
+            <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+            <label for="datemin">Enter a date after 2000-01-01:</label>
+            <input type="date" id="datemin" name="datemin" min="2000-01-02">
+            <!-- 
+                ta có thể sử dụng thuộc tính min và max để giới hạn phạm vi ngày tháng mà người dùng có thể chọn.
+                - min: Xác định ngày sớm nhất mà người dùng có thể chọn.
+                - max: Xác định ngày muộn nhất mà người dùng có thể chọn.
+            -->
+            <input type="datetime-local" id="datetime-local" name="datetime-local">
+            <!-- 
+                datetime-local: Cho phép người dùng chọn ngày và giờ trong cùng một trường.
+                - Không có múi giờ, chỉ sử dụng định dạng ngày và giờ địa phương.
+                - Giúp người dùng dễ dàng chọn ngày và giờ mà không cần phải nhập thủ công.
+            -->
+            <input type="image" src="../images/nature.jpg" alt="Nature Image" width="300" height="200">
+            <!--
+                input type="image": Cho phép người dùng gửi biểu mẫu bằng cách nhấp vào hình ảnh. (ví dụ dùng hình ảnh làm nút gửi)
+                - Hình ảnh sẽ được sử dụng làm nút gửi biểu mẫu.
+                - Thuộc tính src xác định đường dẫn đến hình ảnh.
+                - Thuộc tính alt cung cấp mô tả thay thế cho hình ảnh nếu không thể hiển thị.
+                - Thuộc tính width và height xác định kích thước của hình ảnh.
+            -->
+            <input type="hidden" name="hiddenField" value="hiddenValue">
+            <!--
+                input type="hidden": Cho phép gửi dữ liệu mà không hiển thị trên giao diện người dùng.
+                - Dữ liệu này sẽ được gửi cùng với biểu mẫu nhưng không hiển thị cho người dùng.
+                - Thường được sử dụng để lưu trữ thông tin bổ sung mà không cần người dùng nhập.
+                - Ví dụ: Lưu trữ ID người dùng, trạng thái phiên làm việc, hoặc các giá trị tạm thời khác.
+            -->
+            <input type="search" id="search" name="search" placeholder="Search...">
+            <!--
+                input type="search": Cho phép người dùng nhập từ khóa tìm kiếm.
+                - Có thể sử dụng để tạo ô tìm kiếm trên trang web.
+                - Thuộc tính placeholder cung cấp gợi ý cho người dùng về nội dung cần nhập.
+                - Trình duyệt có thể cung cấp các tính năng tìm kiếm nâng cao như tự động hoàn thành.
+            -->
+        </form>
+
+        <!-- 
+        Các thuộc tính khác của input:
+        - placeholder: Hiển thị văn bản gợi ý trong trường input khi không có giá
+        trị nào được nhập. Ví dụ: <input type="text" placeholder="Enter your name">
+        - required: Yêu cầu người dùng nhập giá trị trước khi gửi biểu mẫu. Ví
+        dụ: <input type="text" required>
+        - disabled: Vô hiệu hóa trường input, không cho phép người dùng tương tác.
+        Ví dụ: <input type="text" disabled>
+        - readonly: Cho phép người dùng xem giá trị nhưng không thể chỉnh sửa.
+        Ví dụ: <input type="text" readonly>
+        - autocomplete: Cho phép trình duyệt tự động hoàn thành giá trị dựa trên
+        các giá trị đã nhập trước đó. Ví dụ: <input type="text" autocomplete="on">
+        - pattern: Xác định mẫu regex mà giá trị của trường input phải khớp.
+        Ví dụ: <input type="text" pattern="[A-Za-z]{3}">
+        - autofocus: Tự động đặt con trỏ vào trường input khi trang được tải.
+        Ví dụ: <input type="text" autofocus>
+        - multiple: Cho phép người dùng chọn nhiều tệp trong trường input type="file".
+        Ví dụ: <input type="file" multiple>
+        - accept: Xác định loại tệp mà trường input type="file" chấp
+        nhận. Ví dụ: <input type="file" accept=".jpg, .png">
+        - size: Xác định kích thước hiển thị của trường input.
+        Ví dụ: <input type="text" size="30">   
+        - maxlength: Giới hạn số lượng ký tự tối đa mà người dùng có thể nhập.
+        Ví dụ: <input type="text" maxlength="10">
+        - minlength: Giới hạn số lượng ký tự tối thiểu mà người dùng phải nhập.
+        Ví dụ: <input type="text" minlength="3">
+        - step: Xác định bước nhảy cho các trường input type="number" hoặc
+        type="range". Ví dụ: <input type="number" step="0.01"> hoặc <input type="range" step="5">
+        - value: Xác định giá trị mặc định của trường input.
+        Ví dụ: <input type="text" value="Default Value">
+        -->
+
+    </div>
+</body>
+
+</html>

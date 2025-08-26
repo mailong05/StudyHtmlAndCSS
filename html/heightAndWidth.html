@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid;
+            width: 360px;
+            height: auto;
+            margin-top: 10px;
+            padding: 10px;
+            box-sizing: content-box;
+            /* box-sizing có thể là content-box, border-box
+                - content-box: Kích thước của phần tử sẽ bằng kích thước của nội dung
+                ví dụ: width: 100px; padding: 10px; border: 2px; => kích thước của phần tử sẽ là 100px
+
+                - border-box: Kích thước của phần tử bằng kích thước của nội dung + padding + border
+                ví dụ: width: 100px; padding: 10px; border: 2px; => kích thước của phần tử sẽ là 100px + 10px + 2px 
+                Ta dùng box-sizing: border-box để tránh việc phải tính toán kích thước của phần tử, Phần tử sẽ giữ nguyên kích thước định nghĩa ngay cả khi thêm padding hoặc border, phần nội dung sẽ bị thu nhỏ nếu cần thiết.  */
+            /* Ta dùng box-sizing: content-box để tính toán kích thước của phần tử, Khi thêm padding hoặc border, kích thước thực tế của phần tử sẽ lớn hơn giá trị width và height được định nghĩa. */
+            display: block;
+            float: left;
+            /* không hoạt động */
+            /* float : left có thể là left, right, none
+                - left: Đẩy phần tử sang trái
+                - right: Đẩy phần tử sang phải
+                - none: Không đẩy phần tử nào */
+
+            /* nhưng trong trường hợp này float không có tác dụng vì width và height đã được set auto */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>This is #1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam sunt eligendi ex magni incidunt odit commodi
+            consectetur quidem repellendus asperiores soluta, facilis accusantium! Repudiandae veritatis odit,
+            asperiores at
+            minus quibusdam.</p>
+    </div>
+
+    <div class="container">
+        <h2>This is #2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dicta ipsa fugit possimus qui, accusamus itaque
+            voluptates tenetur? Blanditiis accusamus illo quo laborum, non quia omnis explicabo in ullam voluptates!</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* Pseudo-classes có thể là: 
+        Các pseudo-classes phổ biến:
+            - hover: Khi con trỏ chuột di chuyển qua phần tử
+            - active: Khi phần tử đang được click
+            - focus: Khi phần tử đang được focus
+            - first-child: Chọn phần tử đầu tiên của phần tử cha
+            - last-child: Chọn phần tử cuối cùng của phần tử cha
+            - nth-child(n): Chọn phần tử thứ n của phần tử cha
+            - nth-last-child(n): Chọn phần tử thứ n từ cuối của phần tử cha
+            - nth-of-type(n): Chọn phần tử thứ n của loại phần tử
+            - nth-last-of-type(n): Chọn phần tử thứ n từ cuối của loại phần tử
+            - first-of-type: Chọn phần tử đầu tiên của loại phần tử
+            - last-of-type: Chọn phần tử cuối cùng của loại phần tử
+            - only-child: Chọn phần tử là duy nhất của phần tử cha
+            - only-of-type: Chọn phần tử là duy nhất của loại phần tử
+            - empty: Chọn phần tử không có phần tử con
+            - not(selector): Chọn phần tử không phải là selector
+            - target: Chọn phần tử có id trùng với href
+            - enabled: Chọn phần tử có thể được sử dụng
+            - disabled: Chọn phần tử không thể được sử dụng
+            - checked: Chọn phần tử được chọn
+            - valid: Chọn phần tử có giá trị hợp lệ
+            - invalid: Chọn phần tử có giá trị không hợp lệ 
+            - required: Chọn phần tử có giá trị bắt buộc nhập
+            - optional: Chọn phần tử có giá trị không bắt buộc nhập
+            - read-only: Chọn phần tử chỉ đọc
+            - read-write: Chọn phần tử có thể đọc và viết
+            - default: Chọn phần tử mặc định
+            - root: Chọn phần tử là gốc
+            
+            ...
+            */
+        button:hover {
+            background-color: red;
+        }
+
+        button:active {
+            background-color: rgb(28, 242, 74);
+        }
+
+        #textFocus {
+            border: solid 2px;
+            /* Bỏ viền xanh khi focus */
+            outline: none;
+        }
+
+        #textFocus:focus {
+            border-color: red;
+            background-color: rgb(28, 242, 74);
+        }
+
+        p:not(.special) {
+            color: red;
+        }
+
+        p.special {
+            color: blue;
+        }
+
+        /* -link: Chọn phần tử chưa được click a */
+        a:link {
+            color: rgb(241, 8, 8);
+        }
+
+        a:hover {
+            color: rgb(227, 12, 162);
+        }
+
+        a:active {
+            color: rgb(7, 211, 7);
+        }
+
+        a:visited {
+            /* Có tác dụng khi đã click vào link rồi sẽ thay đổi màu của link đó (để người dùng biết đã click vào link đó) */
+            color: rgb(7, 7, 211);
+        }
+    </style>
+</body>
+<div>
+    <button type="submit">Clickme</button><br>
+    <input id="textFocus" type="text" placeholder="Enter your name">
+    <p> This is #1</p>
+    <p class="special">This is #2</p><br>
+    <a href="https://www.google.com.vn">Google</a><br>
+    <a href="https://www.w3schools.com/"> Google 2</a>
+</div>
+
+</html>

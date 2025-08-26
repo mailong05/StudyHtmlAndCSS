@@ -1,0 +1,25 @@
+ table {
+     /* Gộp các đường viền trùng lặp: Khi hai ô bảng (<td> hoặc <th>) nằm cạnh nhau, đường viền của chúng sẽ chồng lên nhau. border-collapse: collapse; giúp gộp các đường viền này lại thành một đường duy nhất.*/
+     border-collapse: collapse;
+ }
+
+ tr,
+ th {
+     border: 1px solid black;
+     /* Căn chỉnh nội dung */
+     text-align: center;
+     padding: 4px;
+ }
+
+ a button {
+     background-color: rgb(34, 90, 188);
+     border: solid;
+     border-radius: 4px;
+     color: white;
+
+ }
+
+ a button:hover {
+     background-color: red;
+     /* button: hover có nghĩa là khi rê chuột vào button thì màu nền của button sẽ chuyển sang màu đỏ. */
+ }

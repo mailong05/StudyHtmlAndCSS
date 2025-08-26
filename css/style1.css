@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 80px;
+    overflow: hidden;
+    box-shadow: -3px 4px 5px;
+}
+
+#web {
+    color: rgb(0, 76, 255);
+}
+
+section table,
+section table th,
+section table td {
+    background-color: red;
+    color: white;
+}
+
+/* section {
+    background-color: rgb(99, 92, 92);
+} */
+
+#web,
+#name {
+    font-family: Arial, Helvetica, sans-serif;
+}
