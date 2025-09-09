@@ -221,6 +221,7 @@ footer {
     width: 80%;
     margin: 0 auto;
     margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
@@ -251,4 +252,84 @@ footer {
 .language-select,
 .footer-content p {
     margin-top: 10px;
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #303030;
+}
+
+/* ----------responsive----------- */
+
+@media only screen and (max-width: 768px) {
+    nav .logo {
+        width: 100px;
+    }
+
+    .language,
+    .signIn {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+    }
+
+    .formSignIn .input {
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .formSignIn .submit {
+        width: 80px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .row .col-content,
+    .row .col-image {
+        flex-basis: 100%;
+        /*tại sao không dùng width 100% mà dùng flex-basis 100% vì flex-basis là thuộc tính của flexbox, nó sẽ chiếm 100% trong container flex. Nếu dùng width 100% thì sẽ không còn tính linh hoạt của flexbox nữa, và có thể gây ra các vấn đề về bố cục khi thay đổi kích thước màn hình.*/
+    }
+
+    .feature .row:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .col-content h1 {
+        font-size: 24px;
+    }
+
+    .col-content p {
+        font-size: 14px;
+    }
+
+    .faq {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .faq h1 {
+        font-size: 24px;
+    }
+
+    .accordion label {
+        font-size: 14px;
+    }
+
+    .accordion .anwser {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        font-size: 14px;
+    }
 }
